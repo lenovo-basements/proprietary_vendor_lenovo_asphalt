@@ -25,6 +25,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/asphalt/proprietary/vendor/etc/audio/sku_cape/mixer_paths_waipio_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/mixer_paths_waipio_mtp.xml \
     vendor/lenovo/asphalt/proprietary/vendor/etc/audio/sku_cape/resourcemanager_upd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/resourcemanager_upd.xml \
     vendor/lenovo/asphalt/proprietary/vendor/etc/audio/sku_cape/resourcemanager_waipio_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/resourcemanager_waipio_mtp.xml \
+    vendor/lenovo/asphalt/proprietary/vendor/etc/audio_cal.wav:$(TARGET_COPY_OUT_VENDOR)/etc/audio_cal.wav \
     vendor/lenovo/asphalt/proprietary/vendor/etc/display/qdcm_calib_data_nt36523n_lcd_video_mode_dsi_tcl_panel_with_DSC.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/qdcm_calib_data_nt36523n_lcd_video_mode_dsi_tcl_panel_with_DSC.json \
     vendor/lenovo/asphalt/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     vendor/lenovo/asphalt/proprietary/vendor/etc/dolby_vision.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/dolby_vision.cfg \
@@ -445,7 +446,9 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/asphalt/proprietary/vendor/lib64/camera/fdconfigpreviewlite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigpreviewlite.bin \
     vendor/lenovo/asphalt/proprietary/vendor/lib64/camera/fdconfigvideo.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideo.bin \
     vendor/lenovo/asphalt/proprietary/vendor/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideolite.bin \
-    vendor/lenovo/asphalt/proprietary/vendor/lib64/camera/imx588.pb:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/imx588.pb
+    vendor/lenovo/asphalt/proprietary/vendor/lib64/camera/imx588.pb:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/imx588.pb \
+    vendor/lenovo/asphalt/proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.pal@1.0-impl.so \
+    vendor/lenovo/asphalt/proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.pal@1.0.so
 
 PRODUCT_PACKAGES += \
     libdapparamstorage \
@@ -605,6 +608,7 @@ PRODUCT_PACKAGES += \
     com.qualcomm.mcx.policy.mfl \
     com.qualcomm.mcx.policy.xr \
     com.qualcomm.qti.mcx.usecase.extension \
+    audio.primary.taro_vendor \
     camera.qcom \
     com.qti.chi.override \
     vibrator.default \
@@ -683,6 +687,8 @@ PRODUCT_PACKAGES += \
     vendor.dolby.dvs@1.0 \
     vendor.qti.hardware.camera.aon@1.0-service-impl \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
+    vendor.qti.hardware.pal@1.0-impl_vendor \
+    vendor.qti.hardware.pal@1.0_vendor \
     vendor.qti.hardware.vibrator.impl \
     vendor.qti.hardware.vibrator_dual.device@1.0 \
     bm2n00 \
