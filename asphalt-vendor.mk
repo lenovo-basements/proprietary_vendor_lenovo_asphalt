@@ -691,7 +691,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.pal@1.0-impl_vendor \
     vendor.qti.hardware.pal@1.0_vendor \
     vendor.qti.hardware.vibrator.impl \
-    vendor.qti.hardware.vibrator_dual.device@1.0 \
     bm2n00 \
     bm2n01 \
     bm2n02 \
