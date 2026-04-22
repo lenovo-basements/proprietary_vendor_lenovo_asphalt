@@ -35,8 +35,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/asphalt/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-vision-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-vision-service.rc \
     vendor/lenovo/asphalt/proprietary/vendor/etc/init/vendor.dolby.media.dvs-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.dvs-service.rc \
     vendor/lenovo/asphalt/proprietary/vendor/etc/init/vendor.qti.camera.provider@2.7-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.camera.provider@2.7-service_64.rc \
-    vendor/lenovo/asphalt/proprietary/vendor/etc/init/vendor.qti.hardware.vibrator.service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.vibrator.service.rc \
-    vendor/lenovo/asphalt/proprietary/vendor/etc/init/vendor.qti.hardware.vibrator_dual@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.vibrator_dual@1.2-service.rc \
     vendor/lenovo/asphalt/proprietary/vendor/etc/media_profiles_cape.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_cape.xml \
     vendor/lenovo/asphalt/proprietary/vendor/etc/sensors/config/cape_qrd_lsm6dst_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/cape_qrd_lsm6dst_0.json \
     vendor/lenovo/asphalt/proprietary/vendor/etc/sensors/config/diwali_ak991x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/diwali_ak991x_0.json \
@@ -447,6 +445,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/asphalt/proprietary/vendor/lib64/camera/fdconfigvideo.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideo.bin \
     vendor/lenovo/asphalt/proprietary/vendor/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideolite.bin \
     vendor/lenovo/asphalt/proprietary/vendor/lib64/camera/imx588.pb:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/imx588.pb \
+    vendor/lenovo/asphalt/proprietary/vendor/lib64/hw/audio.primary.taro.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.taro.so \
     vendor/lenovo/asphalt/proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.pal@1.0-impl.so \
     vendor/lenovo/asphalt/proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.pal@1.0.so
 
@@ -608,12 +607,9 @@ PRODUCT_PACKAGES += \
     com.qualcomm.mcx.policy.mfl \
     com.qualcomm.mcx.policy.xr \
     com.qualcomm.qti.mcx.usecase.extension \
-    audio.primary.taro_vendor \
     camera.qcom \
     com.qti.chi.override \
-    vibrator.default \
     libDecoderProcessor \
-    libaacvibrator \
     libaidenoiser \
     libaidenoiserv2 \
     libbitmlengine \
@@ -670,7 +666,6 @@ PRODUCT_PACKAGES += \
     libqllengine \
     libqshcamera \
     libqtigefar \
-    libqtivibratoreffect \
     libsdedrm \
     libsdmcore \
     libsdmutils \
@@ -684,112 +679,105 @@ PRODUCT_PACKAGES += \
     libdlbvol \
     libswdap \
     libswgamedap \
-    vendor.aac.hardware.richtap.vibrator-V1-ndk_platform \
     vendor.dolby.dvs@1.0 \
     vendor.qti.hardware.camera.aon@1.0-service-impl \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
-    vendor.qti.hardware.pal@1.0-impl_vendor \
-    vendor.qti.hardware.pal@1.0_vendor \
-    vendor.qti.hardware.vibrator.impl \
-    bm2n00 \
-    bm2n01 \
-    bm2n02 \
-    bm2n03 \
-    bm2n04 \
-    bm2n05 \
-    bm2n06 \
-    bm2n07 \
-    bm2n08 \
-    bm2n09 \
-    bm2n10 \
-    bm2n11 \
-    bm2n12 \
-    bm2n13 \
-    bm2n14 \
-    bm2n15 \
-    bm2n16 \
-    bm2n17 \
-    bm2n18 \
-    bm2n19 \
-    bm2n20 \
-    bm2n21 \
-    bm2n22 \
-    bm2n23 \
-    bm2n24 \
-    bm2n25 \
-    bm2n26 \
-    bm2n27 \
-    bm2n31 \
-    bm2n32 \
-    bm2n33 \
-    bm2n34 \
-    bm2n35 \
-    bm2n36 \
-    bm2n37 \
-    bm2n38 \
-    bm2n39 \
-    bm2n40 \
-    bm2n41 \
-    bm2n42 \
-    bm2n43 \
-    bm2n44 \
-    bm2n45 \
-    bm2n46 \
-    bm2n47 \
-    bm2n48 \
-    bm2n49 \
-    bm2n50 \
-    bm2n51 \
-    bm2n52 \
-    bm2n53 \
-    bm2n54 \
-    bm2n55 \
-    libDspIOProxy_skel \
-    libQ6MSFR_manager_skel \
-    libVppFrcQnnHtp \
-    libVppQnnHtp \
-    libadsp_jpege_skel \
-    libapn_dsp_skel \
-    libbitml_nsp_skel \
-    libbitml_nsp_v2_skel \
-    libcamera_nn_skel \
-    libcvpdsp_2_1 \
-    libdspCV_skel \
-    libdsp_streamer_binning \
-    libdsp_streamer_qvrcam_receiver \
-    libevadsp_3_0 \
-    libeye_tracking_dsp_sample_skel \
-    libfastcvadsp \
-    libfastcvdsp_skel \
-    libhalide_hexagon_remote_skel \
-    libhdr_skel \
-    libhme_dsp_skel \
-    libmctfengine_skel \
-    libmobilenet_dsp_frc \
-    libmobilenet_dsp_frc_networks \
-    libqvr_cam_dsp_driver_skel \
-    libqvr_dsp_driver_skel \
-    libscveT2T_skel \
-    libtracker_6dof_skel_8250 \
-    libtracker_6dof_skel_8350 \
-    libvpp_ais_networks \
-    libvpp_vqa_networks \
-    libvpt_action_recognition \
+    vendor_lib_rfsa_adsp_bm2n00_bin \
+    vendor_lib_rfsa_adsp_bm2n01_bin \
+    vendor_lib_rfsa_adsp_bm2n02_bin \
+    vendor_lib_rfsa_adsp_bm2n03_bin \
+    vendor_lib_rfsa_adsp_bm2n04_bin \
+    vendor_lib_rfsa_adsp_bm2n05_bin \
+    vendor_lib_rfsa_adsp_bm2n06_bin \
+    vendor_lib_rfsa_adsp_bm2n07_bin \
+    vendor_lib_rfsa_adsp_bm2n08_bin \
+    vendor_lib_rfsa_adsp_bm2n09_bin \
+    vendor_lib_rfsa_adsp_bm2n10_bin \
+    vendor_lib_rfsa_adsp_bm2n11_bin \
+    vendor_lib_rfsa_adsp_bm2n12_bin \
+    vendor_lib_rfsa_adsp_bm2n13_bin \
+    vendor_lib_rfsa_adsp_bm2n14_bin \
+    vendor_lib_rfsa_adsp_bm2n15_bin \
+    vendor_lib_rfsa_adsp_bm2n16_bin \
+    vendor_lib_rfsa_adsp_bm2n17_bin \
+    vendor_lib_rfsa_adsp_bm2n18_bin \
+    vendor_lib_rfsa_adsp_bm2n19_bin \
+    vendor_lib_rfsa_adsp_bm2n20_bin \
+    vendor_lib_rfsa_adsp_bm2n21_bin \
+    vendor_lib_rfsa_adsp_bm2n22_bin \
+    vendor_lib_rfsa_adsp_bm2n23_bin \
+    vendor_lib_rfsa_adsp_bm2n24_bin \
+    vendor_lib_rfsa_adsp_bm2n25_bin \
+    vendor_lib_rfsa_adsp_bm2n26_bin \
+    vendor_lib_rfsa_adsp_bm2n27_bin \
+    vendor_lib_rfsa_adsp_bm2n31_bin \
+    vendor_lib_rfsa_adsp_bm2n32_bin \
+    vendor_lib_rfsa_adsp_bm2n33_bin \
+    vendor_lib_rfsa_adsp_bm2n34_bin \
+    vendor_lib_rfsa_adsp_bm2n35_bin \
+    vendor_lib_rfsa_adsp_bm2n36_bin \
+    vendor_lib_rfsa_adsp_bm2n37_bin \
+    vendor_lib_rfsa_adsp_bm2n38_bin \
+    vendor_lib_rfsa_adsp_bm2n39_bin \
+    vendor_lib_rfsa_adsp_bm2n40_bin \
+    vendor_lib_rfsa_adsp_bm2n41_bin \
+    vendor_lib_rfsa_adsp_bm2n42_bin \
+    vendor_lib_rfsa_adsp_bm2n43_bin \
+    vendor_lib_rfsa_adsp_bm2n44_bin \
+    vendor_lib_rfsa_adsp_bm2n45_bin \
+    vendor_lib_rfsa_adsp_bm2n46_bin \
+    vendor_lib_rfsa_adsp_bm2n47_bin \
+    vendor_lib_rfsa_adsp_bm2n48_bin \
+    vendor_lib_rfsa_adsp_bm2n49_bin \
+    vendor_lib_rfsa_adsp_bm2n50_bin \
+    vendor_lib_rfsa_adsp_bm2n51_bin \
+    vendor_lib_rfsa_adsp_bm2n52_bin \
+    vendor_lib_rfsa_adsp_bm2n53_bin \
+    vendor_lib_rfsa_adsp_bm2n54_bin \
+    vendor_lib_rfsa_adsp_bm2n55_bin \
+    vendor_lib_rfsa_adsp_libDspIOProxy_skel_so \
+    vendor_lib_rfsa_adsp_libQ6MSFR_manager_skel_so \
+    vendor_lib_rfsa_adsp_libVppFrcQnnHtp \
+    vendor_lib_rfsa_adsp_libVppQnnHtp \
+    vendor_lib_rfsa_adsp_libadsp_jpege_skel_so \
+    vendor_lib_rfsa_adsp_libapn_dsp_skel_so \
+    vendor_lib_rfsa_adsp_libbitml_nsp_skel_so \
+    vendor_lib_rfsa_adsp_libbitml_nsp_v2_skel_so \
+    vendor_lib_rfsa_adsp_libcamera_nn_skel_so \
+    vendor_lib_rfsa_adsp_libcvpdsp_2_1_so \
+    vendor_lib_rfsa_adsp_libdspCV_skel_so \
+    vendor_lib_rfsa_adsp_libdsp_streamer_binning_so \
+    vendor_lib_rfsa_adsp_libdsp_streamer_qvrcam_receiver_so \
+    vendor_lib_rfsa_adsp_libevadsp_3_0_so \
+    vendor_lib_rfsa_adsp_libeye_tracking_dsp_sample_skel_so \
+    vendor_lib_rfsa_adsp_libfastcvadsp_so \
+    vendor_lib_rfsa_adsp_libfastcvdsp_skel_so \
+    vendor_lib_rfsa_adsp_libhalide_hexagon_remote_skel_so \
+    vendor_lib_rfsa_adsp_libhdr_skel_so \
+    vendor_lib_rfsa_adsp_libhme_dsp_skel_so \
+    vendor_lib_rfsa_adsp_libmctfengine_skel_so \
+    vendor_lib_rfsa_adsp_libmobilenet_dsp_frc \
+    vendor_lib_rfsa_adsp_libmobilenet_dsp_frc_networks \
+    vendor_lib_rfsa_adsp_libqvr_cam_dsp_driver_skel_so \
+    vendor_lib_rfsa_adsp_libqvr_dsp_driver_skel_so \
+    vendor_lib_rfsa_adsp_libscveT2T_skel_so \
+    vendor_lib_rfsa_adsp_libtracker_6dof_skel_8250_so \
+    vendor_lib_rfsa_adsp_libtracker_6dof_skel_8350_so \
+    vendor_lib_rfsa_adsp_libvpp_ais_networks \
+    vendor_lib_rfsa_adsp_libvpp_vqa_networks \
+    vendor_lib_rfsa_adsp_libvpt_action_recognition \
     libimscamera_jni \
     libimsmedia_jni \
     uimgbaservice \
     uimservicelibrary \
     vendor.dolby.hardware.dms.xml \
     vendor.dolby.media.dvs-service.xml \
-    vendor.qti.hardware.vibrator.service.xml \
     dolbycodec2 \
     dvs-hal-service \
     vendor.dolby.hardware.dms@2.0-service \
     vendor.dolby.media.c2-default-service-dax \
     vendor.qti.camera.provider@2.7-service_64 \
     vendor.qti.hardware.display.composer-service \
-    vendor.qti.hardware.vibrator.service \
-    vendor.qti.hardware.vibrator_dual@1.2-service \
     thermal-engine-v2
 
 PRODUCT_PACKAGES += \
