@@ -1,6 +1,5 @@
 service vendor.camera-provider-2-7 /vendor/bin/hw/vendor.qti.camera.provider@2.7-service_64
     interface android.hardware.camera.provider@2.7::ICameraProvider legacy/1
-    interface android.hardware.camera.provider@2.7::ICameraProvider legacy/2
     interface android.hardware.camera.provider@2.6::ICameraProvider legacy/1
     interface android.hardware.camera.provider@2.5::ICameraProvider legacy/1
     interface android.hardware.camera.provider@2.4::ICameraProvider legacy/1
