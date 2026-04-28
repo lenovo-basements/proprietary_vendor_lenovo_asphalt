@@ -644,9 +644,6 @@ PRODUCT_PACKAGES += \
     libqllengine \
     libqshcamera \
     libqtigefar \
-    libsdedrm \
-    libsdmcore \
-    libsdmutils \
     libsfeShiftExtrapolation \
     libspectre \
     libswregistrationalgo \
@@ -745,7 +742,6 @@ PRODUCT_PACKAGES += \
     uimgbaservice \
     uimservicelibrary \
     vendor.qti.camera.provider@2.7-service_64 \
-    vendor.qti.hardware.display.composer-service \
     thermal-engine-v2
 
 PRODUCT_PACKAGES += \
