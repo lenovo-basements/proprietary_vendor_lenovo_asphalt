@@ -6424,6 +6424,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libbacklight-calib",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libbacklight-calib.so",
+            ],
+            shared_libs: [
+                "libdisplaydebug",
+                "libtinyxml2_1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libbitmlengine",
     owner: "lenovo",
     strip: {
@@ -7107,6 +7133,153 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libdigital-dimming",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdigital-dimming.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libdisplaydebug",
+                "libtinyxml2_1",
+                "libbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdisp-aba",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdisp-aba.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdisplayqos",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdisplayqos.so",
+            ],
+            shared_libs: [
+                "libdisplaydebug",
+                "libtinyxml2_1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdisplayskuutils",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdisplayskuutils.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libdisplaydebug",
+                "libsdmutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdpps",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdpps.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libdisp-aba",
+                "libqdutils",
+                "libutils",
+                "liblog",
+                "libbinder",
+                "libdrm",
+                "libtinyxml2-v34",
+                "libdisplaydebug",
+                "libhidlbase",
+                "android.frameworks.sensorservice@1.0",
+                "libdmabufheap",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libeepromcutter",
     owner: "lenovo",
     strip: {
@@ -7118,6 +7291,36 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libeepromcutter.so",
             ],
             shared_libs: [
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgame_enhance",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libgame_enhance.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libsdm-color",
+                "libtinyxml2_1",
+                "libcutils",
+                "libutils",
+                "libdisplayskuutils",
+                "libc++",
                 "libc",
                 "libm",
                 "libdl",
@@ -7157,6 +7360,35 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libhdr_backlight_adapter",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libhdr_backlight_adapter.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libtinyxml2_1",
+                "libcutils",
+                "libutils",
+                "libdisplaydebug",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libhdr_stub",
     owner: "lenovo",
     strip: {
@@ -7171,6 +7403,36 @@ cc_prebuilt_library_shared {
                 "libcdsprpc",
                 "libcutils",
                 "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhdr_tm",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libhdr_tm.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libsdm-color",
+                "libtinyxml2_1",
+                "libcutils",
+                "libutils",
+                "libdisplayskuutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -7392,6 +7654,33 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.display.mapper@4.0",
                 "vendor.qti.hardware.display.mapperextensions@1.1",
                 "libcdsprpc",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmemutils",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmemutils.so",
+            ],
+            shared_libs: [
+                "libion",
+                "libdisplaydebug",
+                "libvmmem",
+                "libc++",
                 "libc",
                 "libm",
                 "libdl",
@@ -7854,6 +8143,98 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libqdcm-algo",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqdcm-algo.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libdisplaydebug",
+                "libsdm-color",
+                "libbinder",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqdcm-json-mode-parser",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqdcm-json-mode-parser.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libdisplaydebug",
+                "libsdm-color",
+                "libbinder",
+                "libjsoncpp",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqdcm-mode-parser",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqdcm-mode-parser.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libdisplaydebug",
+                "libsdm-color",
+                "libbinder",
+                "libtinyxml2_1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libqll",
     owner: "lenovo",
     strip: {
@@ -7941,6 +8322,30 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libqseed3",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqseed3.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libqshcamera",
     owner: "lenovo",
     strip: {
@@ -7994,6 +8399,152 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "librcmask",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/librcmask.so",
+            ],
+            shared_libs: [
+                "libdisplaydebug",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsdm-color",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsdm-color.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libbinder",
+                "libutils",
+                "libdisplaydebug",
+                "libtinyxml2_1",
+                "libsdmutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsdm-colormgr-algo",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsdm-colormgr-algo.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libdisplaydebug",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsdm-disp-vndapis",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsdm-disp-vndapis.so",
+            ],
+            shared_libs: [
+                "libdisplaydebug",
+                "libqservice",
+                "libbinder",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsdmextension",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsdmextension.so",
+            ],
+            shared_libs: [
+                "libdisplaydebug",
+                "libsdmutils",
+                "libdisplayqos",
+                "libsdm-color",
+                "libdisplayskuutils",
+                "libtinyxml2_1",
+                "libtestutils",
+                "libcrypto",
+                "libssl",
+                "libbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libsfeShiftExtrapolation",
     owner: "lenovo",
     strip: {
@@ -8008,6 +8559,71 @@ cc_prebuilt_library_shared {
                 "libcdsprpc",
                 "libcutils",
                 "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsnapdragoncolor-manager",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsnapdragoncolor-manager.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libdisplaydebug",
+                "libsdm-color",
+                "libbinder",
+                "libtinyxml2-v34",
+                "libsdmutils",
+                "libdrm",
+                "libdigital-dimming",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsnapdragoncolor-qdcm",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsnapdragoncolor-qdcm.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libdisplaydebug",
+                "libsdm-color",
+                "libbinder",
+                "libsdmutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -8098,6 +8714,30 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libtestutils",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libtestutils.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libtfestriping",
     owner: "lenovo",
     strip: {
@@ -8168,6 +8808,30 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libtinyxml2_1",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libtinyxml2_1.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libubifocus",
     owner: "lenovo",
     strip: {
@@ -8202,6 +8866,286 @@ cc_prebuilt_library_shared {
                 "libcdsprpc",
                 "libopencv",
                 "libz",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.color@1.0",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.display.color@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.color@1.1",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.display.color@1.1.so",
+            ],
+            shared_libs: [
+                "vendor.display.color@1.0",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.color@1.2",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.display.color@1.2.so",
+            ],
+            shared_libs: [
+                "vendor.display.color@1.0",
+                "vendor.display.color@1.1",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.color@1.3",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.display.color@1.3.so",
+            ],
+            shared_libs: [
+                "vendor.display.color@1.0",
+                "vendor.display.color@1.1",
+                "vendor.display.color@1.2",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.color@1.4",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.display.color@1.4.so",
+            ],
+            shared_libs: [
+                "vendor.display.color@1.0",
+                "vendor.display.color@1.1",
+                "vendor.display.color@1.2",
+                "vendor.display.color@1.3",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.color@1.5",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.display.color@1.5.so",
+            ],
+            shared_libs: [
+                "vendor.display.color@1.0",
+                "vendor.display.color@1.1",
+                "vendor.display.color@1.2",
+                "vendor.display.color@1.3",
+                "vendor.display.color@1.4",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.color@1.6",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.display.color@1.6.so",
+            ],
+            shared_libs: [
+                "vendor.display.color@1.0",
+                "vendor.display.color@1.1",
+                "vendor.display.color@1.2",
+                "vendor.display.color@1.3",
+                "vendor.display.color@1.4",
+                "vendor.display.color@1.5",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.color@1.7",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.display.color@1.7.so",
+            ],
+            shared_libs: [
+                "vendor.display.color@1.0",
+                "vendor.display.color@1.1",
+                "vendor.display.color@1.2",
+                "vendor.display.color@1.3",
+                "vendor.display.color@1.4",
+                "vendor.display.color@1.5",
+                "vendor.display.color@1.6",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.postproc@1.0",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.display.postproc@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
                 "libc",
                 "libm",
                 "libdl",
@@ -9140,6 +10084,49 @@ dex_import {
 }
 
 cc_prebuilt_binary {
+    name: "vendor.display.color@1.0-service",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.display.color@1.0-service",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libutils",
+                "libbinder",
+                "libhardware_legacy",
+                "libhardware",
+                "libhidlbase",
+                "vendor.display.color@1.0",
+                "vendor.display.color@1.1",
+                "vendor.display.color@1.2",
+                "vendor.display.color@1.3",
+                "vendor.display.color@1.4",
+                "vendor.display.color@1.5",
+                "vendor.display.color@1.6",
+                "vendor.display.color@1.7",
+                "vendor.display.postproc@1.0",
+                "libsdm-disp-vndapis",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "vendor.qti.camera.provider@2.7-service_64",
     owner: "lenovo",
     target: {
@@ -9199,6 +10186,67 @@ cc_prebuilt_binary {
     },
     prefer: true,
     relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "ppd",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/ppd",
+            ],
+            shared_libs: [
+                "libutils",
+                "libhidltransport",
+                "libcutils",
+                "liblog",
+                "libhidlbase",
+                "vendor.display.postproc@1.0",
+                "vendor.display.color@1.7",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "qdcmss",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/qdcmss",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "libqservice",
+                "libsdmutils",
+                "libbinder",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
     soc_specific: true,
 }
 

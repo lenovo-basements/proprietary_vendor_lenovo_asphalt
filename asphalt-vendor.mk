@@ -26,8 +26,21 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/asphalt/proprietary/vendor/etc/audio/sku_cape/resourcemanager_upd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/resourcemanager_upd.xml \
     vendor/lenovo/asphalt/proprietary/vendor/etc/audio/sku_cape/resourcemanager_waipio_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/resourcemanager_waipio_mtp.xml \
     vendor/lenovo/asphalt/proprietary/vendor/etc/audio_cal.wav:$(TARGET_COPY_OUT_VENDOR)/etc/audio_cal.wav \
+    vendor/lenovo/asphalt/proprietary/vendor/etc/display/DPU660.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU660.xml \
+    vendor/lenovo/asphalt/proprietary/vendor/etc/display/DPU670.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU670.xml \
+    vendor/lenovo/asphalt/proprietary/vendor/etc/display/DPU720.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU720.xml \
+    vendor/lenovo/asphalt/proprietary/vendor/etc/display/DPU7__.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU7__.xml \
+    vendor/lenovo/asphalt/proprietary/vendor/etc/display/DPU820.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU820.xml \
+    vendor/lenovo/asphalt/proprietary/vendor/etc/display/DPU830.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU830.xml \
+    vendor/lenovo/asphalt/proprietary/vendor/etc/display/DPU860.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU860.xml \
+    vendor/lenovo/asphalt/proprietary/vendor/etc/display/DPU8__.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU8__.xml \
+    vendor/lenovo/asphalt/proprietary/vendor/etc/display/DPU9__.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU9__.xml \
+    vendor/lenovo/asphalt/proprietary/vendor/etc/display/advanced_sf_offsets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/advanced_sf_offsets.xml \
     vendor/lenovo/asphalt/proprietary/vendor/etc/display/qdcm_calib_data_nt36523n_lcd_video_mode_dsi_tcl_panel_with_DSC.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/qdcm_calib_data_nt36523n_lcd_video_mode_dsi_tcl_panel_with_DSC.json \
+    vendor/lenovo/asphalt/proprietary/vendor/etc/display/thermallevel_to_fps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/thermallevel_to_fps.xml \
     vendor/lenovo/asphalt/proprietary/vendor/etc/init/init_thermal-engine-v2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_thermal-engine-v2.rc \
+    vendor/lenovo/asphalt/proprietary/vendor/etc/init/qdcmss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qdcmss.rc \
+    vendor/lenovo/asphalt/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/lenovo/asphalt/proprietary/vendor/etc/init/vendor.qti.camera.provider@2.7-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.camera.provider@2.7-service_64.rc \
     vendor/lenovo/asphalt/proprietary/vendor/etc/media_profiles_cape.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_cape.xml \
     vendor/lenovo/asphalt/proprietary/vendor/etc/sensors/config/cape_qrd_lsm6dst_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/cape_qrd_lsm6dst_0.json \
@@ -598,6 +611,7 @@ PRODUCT_PACKAGES += \
     com.qti.chi.override \
     libaidenoiser \
     libaidenoiserv2 \
+    libbacklight-calib \
     libbitmlengine \
     libbitmlenginev2 \
     libcamera_nn_stub \
@@ -619,14 +633,23 @@ PRODUCT_PACKAGES += \
     libchilog \
     libcom.qti.chinodeutils \
     libdepthcomputation \
+    libdigital-dimming \
+    libdisp-aba \
+    libdisplayqos \
+    libdisplayskuutils \
+    libdpps \
     libeepromcutter \
+    libgame_enhance \
     libhdr10plus \
+    libhdr_backlight_adapter \
     libhdr_stub \
+    libhdr_tm \
     libipebpsstriping \
     libipebpsstriping170 \
     libipebpsstriping480 \
     libjpege \
     libmctfengine_stub \
+    libmemutils \
     libmfGhostDetection \
     libmmcamera_bestats \
     libmmcamera_cac \
@@ -639,18 +662,40 @@ PRODUCT_PACKAGES += \
     libopencv3a \
     libopestriping \
     libos \
+    libqdcm-algo \
+    libqdcm-json-mode-parser \
+    libqdcm-mode-parser \
     libqll \
     libqll10 \
     libqllengine \
+    libqseed3 \
     libqshcamera \
     libqtigefar \
+    librcmask \
+    libsdm-color \
+    libsdm-colormgr-algo \
+    libsdm-disp-vndapis \
+    libsdmextension \
     libsfeShiftExtrapolation \
+    libsnapdragoncolor-manager \
+    libsnapdragoncolor-qdcm \
     libspectre \
     libswregistrationalgo \
     libsynx \
+    libtestutils \
     libtfestriping \
     libthreadutils \
+    libtinyxml2_1 \
     libubifocus \
+    vendor.display.color@1.0 \
+    vendor.display.color@1.1 \
+    vendor.display.color@1.2 \
+    vendor.display.color@1.3 \
+    vendor.display.color@1.4 \
+    vendor.display.color@1.5 \
+    vendor.display.color@1.6 \
+    vendor.display.color@1.7 \
+    vendor.display.postproc@1.0 \
     vendor.qti.hardware.camera.aon@1.0-service-impl \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
     vendor_lib_rfsa_adsp_bm2n00_bin \
@@ -741,7 +786,10 @@ PRODUCT_PACKAGES += \
     libimsmedia_jni \
     uimgbaservice \
     uimservicelibrary \
+    vendor.display.color@1.0-service \
     vendor.qti.camera.provider@2.7-service_64 \
+    ppd \
+    qdcmss \
     thermal-engine-v2
 
 PRODUCT_PACKAGES += \
